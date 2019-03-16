@@ -5,8 +5,8 @@
 
 var target = Argument("target", "Default");
 var buildConfiguration = Argument("buildConfig", "Debug");
-var waveVersion = Argument("wave", "[183.0]");
-var extensionsVersion =  Argument("Version", "2018.3.4");
+var waveVersion = Argument("wave", "[191.0]");
+var extensionsVersion =  Argument("Version", "2019.1.0");
 
 var solutionName = "ReSharper.Structured.Logging";
 var projectName = solutionName;

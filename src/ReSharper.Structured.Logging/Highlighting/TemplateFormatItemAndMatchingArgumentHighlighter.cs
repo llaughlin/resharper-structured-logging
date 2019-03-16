@@ -1,7 +1,7 @@
 ﻿using System;
 
 using JetBrains.Annotations;
-using JetBrains.DataFlow;
+using JetBrains.Lifetimes;
 using JetBrains.ReSharper.Daemon.CaretDependentFeatures;
 using JetBrains.ReSharper.Feature.Services.Contexts;
 using JetBrains.ReSharper.Feature.Services.Daemon;
@@ -30,7 +30,7 @@ namespace ReSharper.Structured.Logging.Highlighting
 
         [AsyncContextConsumer]
         public static Action ProcessContext(
-            [NotNull] Lifetime lifetime,
+            Lifetime lifetime,
             [NotNull] HighlightingProlongedLifetime prolongedLifetime,
             [NotNull] [ContextKey(typeof(ContextHighlighterPsiFileView.ContextKey))]
             IPsiDocumentRangeView psiDocumentRangeView,
